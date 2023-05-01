@@ -1,0 +1,8 @@
+#Readind the Dataset
+iris = pd.read_csv("iris.csv")
+
+#Displaying the first five rows
+print(iris.head())
+
+#Displaying the last five rows
+print(iris.tail())
