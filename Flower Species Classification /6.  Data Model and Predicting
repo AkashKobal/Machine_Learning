@@ -1,0 +1,3 @@
+# Data Model and Predicting 
+knnmodel = KNeighborsClassifier(n_neighbors=3)
+knnmodel.fit(x_train,y_train)
