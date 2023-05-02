@@ -1,0 +1,3 @@
+# Data Normalization
+x = preprocessing.StandardScaler().fit_transform(X)
+print(x)
