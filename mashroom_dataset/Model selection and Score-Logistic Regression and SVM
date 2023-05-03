@@ -1,0 +1,7 @@
+# Model selection and Score-Logistic Regression and SVM
+logistic_model = LogisticRegression()
+svmodel = SVC(C=1.0,kernel='rbf')
+logistic_model.fit(X_train,Y_train)
+svmodel.fit(X_train,Y_train)
+print(f"Logistic Regression :{logistic_model.score(X_test,Y_test)}")
+print(f"support vector machine:{svmodel.score(X_test,Y_test)}")
