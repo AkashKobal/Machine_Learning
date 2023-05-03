@@ -1,0 +1,8 @@
+# splitting Data into X and Y
+X = data.drop('class',axis = 1)
+Y = data['class']
+print(X)
+
+scaler = StandardScaler()
+X = pd.DataFrame(scaler.fit_transform(X),columns = X.columns)
+print(X)
