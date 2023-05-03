@@ -1,0 +1,10 @@
+# Data Preprocessing-Label Encoding
+
+mapping =list()
+encoder = LabelEncoder()
+for column in range(len(data.columns)):
+    data[data.columns[column]] = encoder.fit_transform(data[data.columns[column]])
+    mapping_dict = {index: label for index, label in enumerate(encoder.classes_)}
+    mapping.append(mapping_dict)
+    
+print(mapping)
