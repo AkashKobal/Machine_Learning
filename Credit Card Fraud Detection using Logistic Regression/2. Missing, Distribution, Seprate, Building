@@ -1,0 +1,23 @@
+# missing value in the dataset
+print(data.isnull().sum())
+
+
+# Distribution of normal and fraud transactions
+print(data['Class'].value_counts())
+
+
+# seprate the data
+normal = data[data.Class==0]
+fraud = data[data.Class==1]
+
+print(normal.shape)
+print(fraud.shape)
+
+
+# Building new Normal dataset containing similar distribution of normal and fraud transaction
+normal_sample= normal.sample(n=492)
+
+
+new_dataset = pd.concat([normal_sample,fraud],axis=0)
+print(new_dataset.head())
+print(new_dataset.shape)
