@@ -1,0 +1,3 @@
+# Model Training-Loistic Regression
+model = LogisticRegression()
+model.fit(x_train,y_train)
