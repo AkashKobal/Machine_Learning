@@ -1,0 +1,7 @@
+#Model Evaluation-Accuracy Score
+#Accuracy on training data
+y_predict = model.predict(x_test)
+
+
+accuracy = accuracy_score(y_test,y_predict)
+print(accuracy)
