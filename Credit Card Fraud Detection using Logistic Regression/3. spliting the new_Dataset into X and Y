@@ -1,0 +1,12 @@
+#spliting the new_Dataset into X and Y
+x = new_dataset.drop(columns='Class',axis=1)
+y = new_dataset['Class']
+
+
+print(x)
+print(y)
+
+
+#spliting the new_Dataset into Training Data and Testing Data
+x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.2,stratify=y,random_state=42)
+print(x_train,x_test,y_train,y_test)
