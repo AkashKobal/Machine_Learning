@@ -1,0 +1,4 @@
+bmdata.head()
+bmdata['Item_Fat_Content'].value_counts()
+bmdata.replace({'Item_Fat_Content':{'low fat':'Low FaT','LF':'Low Fat','Low FAT':'Low Fat','reg':'Regular'}},inplace=True)
+bmdata['Item_Fat_Content'].value_counts()
