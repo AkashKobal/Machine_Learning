@@ -1,0 +1,23 @@
+encoder=LabelEncoder()
+#encoding Item_Identifier
+bmdata['Item_Identifier']=encoder.fit_transform(bmdata['Item_Identifier'])
+
+#encoding Item_Fat_Content
+bmdata['Item_Fat_Content']=encoder.fit_transform(bmdata['Item_Fat_Content'])
+
+#encoding Item_Type
+bmdata['Item_Type']=encoder.fit_transform(bmdata['Item_Type'])
+
+#encoding Outlet_Identifier
+bmdata['Outlet_Identifier']=encoder.fit_transform(bmdata['Outlet_Identifier'])
+
+#encoding Outlet_Size
+bmdata['Outlet_Size']=encoder.fit_transform(bmdata['Outlet_Size'])
+
+#encoding Outlet_Location_Type
+bmdata['Outlet_Location_Type']=encoder.fit_transform(bmdata['Outlet_Location_Type'])
+
+#encoding Outlet_Type
+bmdata['Outlet_Type']=encoder.fit_transform(bmdata['Outlet_Type'])
+
+bmdata.head()
