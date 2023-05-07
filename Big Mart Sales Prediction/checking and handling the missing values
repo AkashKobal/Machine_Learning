@@ -1,0 +1,28 @@
+#checking the missing values
+bmdata.isnull().sum()
+
+
+#mean of 'Item_Weight' column
+bmdata['Item_Weight'].mean()
+
+
+
+#filling the missing values in Item_Weight column
+bmdata['Item_Weight'].fillna(bmdata['Item_Weight'].mean(),inplace=True)
+
+
+#mode of 'Outlet_Size' column
+bmdata['Outlet_Size'].mode()
+
+
+#filling the missing values in Outlet_Size column
+mode_of_Outlet_size=bmdata.pivot_table(values='Outlet_Size',columns='Outlet_Type',aggfunc=(lambda x:x.mode()[0]))
+
+
+print(mode_of_Outlet_size)
+miss_values=bmdata['Outlet_Size'].isnull()
+print(miss_values)
+
+bmdata.loc[miss_values,'Outlet_Size']=bmdata.loc[miss_values,'Outlet_Type'].apply(lambda x: mode_of_Outlet_size[x])
+
+bmdata.isnull().sum()
