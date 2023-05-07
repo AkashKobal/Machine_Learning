@@ -1,0 +1,43 @@
+bmdata.describe()
+sns.set()
+#Item_Weight Distribution
+plt.figure(figsize=(8,6))
+sns.distplot(bmdata['Item_Weight'])
+plt.show()
+
+
+#Item_Visibility Distribution
+
+plt.figure(figsize=(8,6))
+sns.distplot(bmdata['Item_Visibility'])
+plt.show()
+
+
+#Item_MRP Distribution
+plt.figure(figsize=(8,6))
+sns.distplot(bmdata['Item_MRP'])
+plt.show()
+
+
+#Item_Outlet_Sales Distribution
+plt.figure(figsize=(8,6))
+sns.distplot(bmdata['Item_Outlet_Sales'])
+plt.show()
+
+
+#Outlet_Establishment_Year column
+plt.figure(figsize=(8,6))
+sns.countplot(x='Outlet_Establishment_Year',data=bmdata)
+plt.show()
+
+
+#Item_Fat_Content column
+plt.figure(figsize=(8,6))
+sns.countplot(x='Item_Fat_Content',data=bmdata)
+plt.show()
+
+
+#Outlet_Size column
+plt.figure(figsize=(8,6))
+sns.countplot(x='Outlet_Size',data=bmdata)
+plt.show()
