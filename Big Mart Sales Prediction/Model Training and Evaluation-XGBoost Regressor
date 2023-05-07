@@ -1,0 +1,12 @@
+model=XGBRegressor()
+model.fit(X_train,Y_train)
+#predicting
+train_data_predict=model.predict(X_train)
+
+#RSquared value
+r2_train=metrics.r2_score(Y_train,train_data_predict)
+print(r2_train)
+
+test_data_predict=model.predict(X_test)
+r2_test=metrics.r2_score(Y_test,test_data_predict)
+print(r2_test)
