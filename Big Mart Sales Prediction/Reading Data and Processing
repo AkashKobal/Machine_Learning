@@ -1,0 +1,14 @@
+#Loading the data from csv file
+bmdata=pd.read_csv('/content/big_mart_sales.csv')
+
+
+#display the first 5 rows of the dataframe
+bmdata.head()
+
+
+#displaying the shape of the dataset
+bmdata.shape
+
+
+#displaying the info about the dataset
+bmdata.info()
