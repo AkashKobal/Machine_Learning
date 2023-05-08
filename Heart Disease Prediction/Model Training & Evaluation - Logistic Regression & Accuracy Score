@@ -1,0 +1,7 @@
+model=LogisticRegression()
+model.fit(X_train,Y_train)
+
+#predict
+y_predict=model.predict(X_test)
+acc=accuracy_score(Y_test,y_predict)
+print(acc)
