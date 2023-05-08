@@ -1,0 +1,8 @@
+X=hdata.drop(columns='target',axis=1)
+Y=hdata['target']
+
+
+##**Splitting the Data into Training data and Testing data**
+
+X_train,X_test,Y_train,Y_test=train_test_split(X,Y, test_size=0.2,stratify=Y,random_state=2)
+print(X_train.shape,X_test.shape)
