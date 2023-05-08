@@ -1,0 +1,14 @@
+inputData=(75,0,2,145,233,1,0,150,0,2.3,0,0,1)
+input_array_data=np.asarray(inputData)
+input_data_reshaped=input_array_data.reshape(1,-1)
+
+prediction=model.predict(input_data_reshaped)
+print(prediction)
+
+
+if (prediction[0]==1):
+  print('The Person has a Heart Disease')
+else:
+  print('The Person does not have Heart Disease')
+
+
