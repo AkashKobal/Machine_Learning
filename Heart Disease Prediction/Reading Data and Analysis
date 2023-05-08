@@ -1,0 +1,23 @@
+#reading the csv file in the pandas dataframe
+hdata=pd.read_csv('/content/heart_disease_data.csv')
+
+#Printing the first 5 rows of the dataset
+hdata.head()
+
+#Printing the last 5 rows of the dataset
+hdata.tail()
+
+#Finding the shape of the dataset
+hdata.shape
+
+#Getting Information of the dataset
+hdata.info()
+
+#Checking the missing values
+hdata.isnull().sum()
+
+#statistical information about the dataset 
+hdata.describe()
+
+#checking the distribution of the Target variable
+hdata['target'].value_counts()
